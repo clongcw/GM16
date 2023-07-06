@@ -1,0 +1,60 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style BasedOn="{StaticResource MahApps.Styles.TextBlock}" TargetType="TextBlock">
+        <!--<Setter Property="HorizontalAlignment" Value="Center"></Setter>-->
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <!--<Setter Property="FontFamily" Value="SourceHanSansCN-Regular"></Setter>-->
+        <!--<Setter Property="Height" Value="30"></Setter>-->
+    </Style>
+
+    <Style
+        x:Key="TbTitle"
+        BasedOn="{StaticResource MahApps.Styles.TextBlock}"
+        TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="SourceHanSansCN-Regular" />
+        <Setter Property="FontSize" Value="20" />
+        <!--<Setter Property="Height" Value="30"></Setter>-->
+    </Style>
+
+    <Style
+        x:Key="TbStatus"
+        BasedOn="{StaticResource MahApps.Styles.TextBlock}"
+        TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="FontFamily" Value="SourceHanSansCN-Medium" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Margin" Value="40,0" />
+        <Setter Property="Foreground" Value="#5d6a7c" />
+    </Style>
+
+    <Style
+        x:Key="TbLabel"
+        BasedOn="{StaticResource MahApps.Styles.TextBlock}"
+        TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontFamily" Value="SourceHanSansCN-Regular" />
+        <Setter Property="Foreground" Value="#282828" />
+    </Style>
+
+    <Style x:Key="DlgTitleText" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#FFFFFF" />
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="Margin" Value="20,5" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+    </Style>
+</ResourceDictionary>

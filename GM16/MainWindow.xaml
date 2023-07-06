@@ -1,0 +1,64 @@
+﻿<Controls:MetroWindow
+    x:Class="GM16.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:local="clr-namespace:GM16"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:v="clr-namespace:GM16.Views"
+    Title="GM16"
+    Width="800"
+    Height="450"
+    DataContext="{Binding Main, Source={StaticResource Locator}}"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    mc:Ignorable="d">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="139*" />
+                <ColumnDefinition Width="68*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ToolBarPanel
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="2"
+                Margin="0,0,0,995"
+                Visibility="Collapsed">
+                <Button
+                    Width="100"
+                    HorizontalAlignment="Left"
+                    Command="{Binding ShakerControlCommand}"
+                    Content="振荡器" />
+            </ToolBarPanel>
+            <Controls:MetroTabControl Grid.Row="1" Grid.ColumnSpan="2">
+                <Controls:MetroTabItem Header="调试">
+                    <Controls:MetroTabControl>
+                        <Controls:MetroTabItem Controls:HeaderedControlHelper.HeaderFontSize="20" Header="排枪调试">
+                            <v:MutiplePipetteAdjust HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </Controls:MetroTabItem>
+                        <Controls:MetroTabItem Controls:HeaderedControlHelper.HeaderFontSize="20" Header="ADP调试">
+                            <v:AdpAdjust HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Controls:MetroTabItem>
+                    </Controls:MetroTabControl>
+                </Controls:MetroTabItem>
+                <Controls:MetroTabItem Header="Protocol管理">
+                    <v:ProtocolManagement />
+                </Controls:MetroTabItem>
+            </Controls:MetroTabControl>
+
+        </Grid>
+        <Button Command="{Binding ShowCommand}" Content="显示" />
+    </StackPanel>
+</Controls:MetroWindow>

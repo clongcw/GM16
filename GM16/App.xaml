@@ -1,0 +1,22 @@
+﻿<Application
+    x:Class="GM16.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:GM16"
+    Startup="Application_Startup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />
+
+                <ResourceDictionary Source="/GM16.Shared;component/ObjectDataProviders/ObjectDataProviders.xaml" />
+                <ResourceDictionary Source="/GM16.UI;component/Collection.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <vm:ViewModelLocator xmlns:vm="clr-namespace:GM16.ViewModels" x:Key="Locator" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,66 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:GM16.Shared.ObjectDataProviders">
+
+    <ObjectDataProvider
+        x:Key="LocNames"
+        MethodName="GetLocNames"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="TipNames"
+        MethodName="GetTipPosNames"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="TipTypes"
+        MethodName="get_GetTipTypes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="PosTipTypes"
+        MethodName="get_GetPosTipTypes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="PipetteTypes"
+        MethodName="GetPipetteTypeSource"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="LiquidTypes"
+        MethodName="get_GetLiquidTypes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="AllChannels"
+        MethodName="GetAllChannels"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="ExtractChannels"
+        MethodName="GetExtractChannels"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="CalibrateVolumes"
+        MethodName="GetCalibrateVolumes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="TipIds"
+        MethodName="GetTipIds"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="StepTypes"
+        MethodName="GetStepTypes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="LiqHaLocNames"
+        MethodName="GetLiqHaLocNames"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="SampleTypes"
+        MethodName="GetSampleTypes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="ContainerTypes"
+        MethodName="GetContainerTypes"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+    <ObjectDataProvider
+        x:Key="DispenseRows"
+        MethodName="GetDispenseRows"
+        ObjectType="{x:Type local:StaticObjHelper}" />
+</ResourceDictionary>
