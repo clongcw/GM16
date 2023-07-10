@@ -1,4 +1,5 @@
 ﻿using GM16.Shared.Constants;
+using GM16.Shared.Services;
 using SqlSugar;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace GM16.Shared.EntityModel.DBContext
 {
     public class UserContext
     {
+        private readonly Logger _log = Logger.Instance;
         public SqlSugarClient Db;
         public UserContext()
         {
@@ -24,6 +26,7 @@ namespace GM16.Shared.EntityModel.DBContext
                     OnLogExecuting = (sql, p) =>
                     {
                         Console.WriteLine(sql);
+                        _log.Debug(sql);
                     }
                 }
             });

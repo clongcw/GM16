@@ -59,7 +59,7 @@
 
         <UniformGrid Grid.Row="1" Columns="2">
             <ContentControl  Content="{Binding Content}" />
-            <TextBlock Text="测试" Visibility="{Binding CurrentUser.Role.Privileges.Privilege1.Visiual}"/>
+            <Button Content="测试" Command="{Binding ShowCommand}"/>
         </UniformGrid>
         
 
